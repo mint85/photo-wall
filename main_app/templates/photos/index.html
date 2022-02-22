@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="page-title">
+    <h2>Allen's Photo Wall</h2>
+</div>
+<div class="container">
+    <div class="row">
+        {% for photo in photos %}
+        <div class="col-md-4">
+            <div class="card-content">
+                <a href="#">
+                    <!-- <a href="{% url 'photo_detail' photo.id %}"> -->
+                    <div class="content-overlay"></div>
+                    <img class="content-image" src="https://i.imgur.com/In3JUfV.jpg">
+                    <div class="content-details fadeIn-bottom">
+                        <h3 class="content-title">{{ photo.name }}</h3>
+                    </div>
+                    <!-- </a> -->
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
