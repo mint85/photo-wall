@@ -1,7 +1,9 @@
-.container {
+/* .container {
     margin-top: 50px;
+} */
+.page-title {
+    text-align: center;
 }
-
 .card-content {
     position: relative;
     width: 90%;
