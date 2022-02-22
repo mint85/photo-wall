@@ -12,5 +12,6 @@ def photos_index(request):
 
 def photos_detail(request, photo_id):
     photo = Photo.objects.get(id=photo_id)
-    if photo.user_id != request.user.id:
-        return redirect('photos_index') 
+    #if photo.user_id != request.user.id:
+        #return redirect('photos_index')
+    return render(request, 'photos/detail.html', { 'photo': photo }) 
