@@ -6,8 +6,13 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import login
-from .models import Photo
+from .models import Photo, PhotoFile
+import boto3
+import uuid
 
+# Environment Variables for S3
+S3_BASE_URL = 'https://s3.us-east-1.amazonaws.com/'
+BUCKET = 'photo-wall-persistence-amj'
 
 def signup(request):
     error_message = ''
@@ -58,3 +63,20 @@ class PhotoDelete(LoginRequiredMixin, DeleteView):
     model = Photo
     success_url = '/photos/'
 
+@login_required
+def add_photo(request, photo_id):
+        photo_file = request.FILES.get('photo-file', None)
+        if photo_file:
+            s3 = boto3.client('s3')
+            key = uuid.uuid4().hex[:6] + photo_file.name[photo_file.name.rfind('.'):]
+            try:
+                s3.upload_fileobj(photo_file, BUCKET, key)
+                url = f"{S3_BASE_URL}{BUCKET}/{key}"
+                photo = PhotoFile(url=url, photo_id=photo_id)
+                photo.save()
+            except Exception as error:
+                print('**************')
+                print('An error occurred uploading file to S3')
+                print(error)
+                print('**************')
+        return redirect('photo_detail', photo_id=photo_id)

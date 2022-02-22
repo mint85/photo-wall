@@ -12,3 +12,10 @@ class Photo(models.Model):
     
     def get_absolute_url(self):
         return reverse('photo_detail', kwargs={'photo_id': self.id})
+
+class PhotoFile(models.Model):
+    url = models.CharField(max_length=200)
+    photo = models.ForeignKey(Photo, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"Photo for photo_id: {self.photo_id} @{self.url}"

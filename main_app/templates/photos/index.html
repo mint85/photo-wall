@@ -10,7 +10,9 @@
             <div class="card-content">
                 <a href="{% url 'photo_detail' photo.id %}">
                     <div class="content-overlay"></div>
-                    <img class="content-image" src="https://i.imgur.com/In3JUfV.jpg">
+                    {% for photofile in photo.photofile_set.all %}
+                    <img class="content-image" src="{{ photofile.url }}">
+                    {% endfor %}
                     <div class="content-details fadeIn-bottom">
                         <h3 class="content-title">{{ photo.name }}</h3>
                     </div>
