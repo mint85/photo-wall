@@ -4,5 +4,29 @@
 <div class="page-title mt-4">
     <h1>{{ photo.name.capitalize }}'s Detail Page</h1>
 </div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-9 p-3">
+            <img src="https://i.imgur.com/In3JUfV.jpg" alt="{{ photo.name }}" class="img-fluid">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Photo Details
+                    </h5>
+                    <p class="card-text">
+                        Name: {{ photo.name }}<br>
+                        Description: {{ photo.description }}
+                    </p>
+                    <a href="{% url 'photos_update' photo.id %}" class="btn btn-primary">EDIT</a>
+                    <a href="{% url 'photos_delete' photo.id %}" class="btn btn-danger">DELETE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

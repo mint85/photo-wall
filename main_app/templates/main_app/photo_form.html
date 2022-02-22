@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if object %}
+    <h1>Edit {{object.name}}'s information</h1>
+{% else %}
+    <h1>Add a new Photo</h1>
+{% endif %}
+
+<form action="" method="post">
+    <!-- We must always use this csrf_token tag in our forms! -->
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input class="btn btn-success" type="submit" value="{% if object %} Save Changes {% else %} Add Photo {% endif %}">
+</form>
+
+{% endblock %}

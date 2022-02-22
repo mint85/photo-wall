@@ -32,8 +32,8 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavItems">
                     <div class="navbar-nav">
                         <a href="/" class="nav-item nav-link active" aria-current="page">Home</a>
-                        <a href="/photos" class="nav-item nav-link">My Photo Wall</a>
-                        <a href="#" class="nav-item nav-link">Add Photos</a>
+                        <a href="{% url 'photos_index' %}" class="nav-item nav-link">My Photo Wall</a>
+                        <a href="{% url 'photos_create' %}" class="nav-item nav-link">Add Photos</a>
                         <a href="#" class="nav-item nav-link">Log Out</a>
                     </div>
                 </div>
