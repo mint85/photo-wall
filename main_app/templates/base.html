@@ -32,9 +32,14 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavItems">
                     <div class="navbar-nav">
                         <a href="/" class="nav-item nav-link active" aria-current="page">Home</a>
+                        {% if user.is_authenticated %}
                         <a href="{% url 'photos_index' %}" class="nav-item nav-link">My Photo Wall</a>
                         <a href="{% url 'photos_create' %}" class="nav-item nav-link">Add Photos</a>
-                        <a href="#" class="nav-item nav-link">Log Out</a>
+                        <a href="{% url 'logout' %}" class="nav-item nav-link">Log Out</a>
+                        {% else %}
+                        <a href="{% url 'login' %}" class="nav-item nav-link">Log In</a>
+                        <a href="{% url 'signup' %}" class="nav-item nav-link">Sign Up</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
