@@ -11,7 +11,7 @@
                 <a href="{% url 'photo_detail' photo.id %}">
                     <div class="content-overlay"></div>
                     {% for photofile in photo.photofile_set.all %}
-                    <img class="content-image" src="{{ photofile.url }}">
+                    <img class="content-image" id="wall-img" src="{{ photofile.url }}">
                     {% endfor %}
                     <div class="content-details fadeIn-bottom">
                         <h3 class="content-title">{{ photo.name }}</h3>

@@ -28,9 +28,11 @@ def signup(request):
     context = { 'form': form, 'error': error_message }
     return render(request, 'registration/signup.html', context)
 
-
 def home(request):
     return render(request, 'home.html')
+
+def about(request):
+    return render(request, 'about.html')
 
 @login_required
 def photos_index(request):

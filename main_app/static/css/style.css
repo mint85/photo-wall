@@ -1,6 +1,48 @@
-/* .container {
-    margin-top: 50px;
+
+
+/* BASE */
+
+
+#linkedin-link {
+    border-radius: 50%;
+    background-color: #0082ca;
+    border: none;
+}
+
+#github-link {
+    border-radius: 50%;
+    background-color: #333333;
+    border: none;
+}
+
+#linkedin-link:hover {
+    transition: 0.5s;
+    box-shadow: 0 0 12px #0082ca;
+}
+
+#github-link:hover {
+    transition: 0.5s;
+    box-shadow: 0 0 12px #333333;
+}
+/* .main-area {
+    had container and h-100 listed
 } */
+
+
+/* HOME */
+
+
+#home-body {
+    background-color: dodgerblue;
+}
+
+
+/* ABOUT */
+
+
+/* PHOTOS INDEX */
+
+
 .page-title {
     text-align: center;
 }
@@ -12,10 +54,10 @@
 }
 
 .card-content .content-overlay {
-    background: rgba(0, 0, 0, 0.7);
     position: absolute;
     height: 100%;
     width: 100%;
+    background: rgba(0, 0, 0, 0.7);
     opacity: 0;
     transition: all 0.4s ease-in-out 0s;
 }
@@ -28,19 +70,19 @@
     width: 100%;
 }
 
-img {
-    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+#wall-img {
+    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.1);
     /* border-radius: 5px; */
 }
 
 .content-details {
     position: absolute;
     text-align: center;
-    padding-left: 1em;
-    padding-right: 1em;
     width: 100%;
     top: 50%;
     left: 50%;
+    padding-left: 1em;
+    padding-right: 1em;
     opacity: 0;
     transform: translate(-50%, -50%);
     transition: all 0.3s ease-in-out 0s;
@@ -63,3 +105,14 @@ img {
 .fadeIn-bottom {
     top: 80%;
 }
+
+/* PHOTOS DETAIL */
+
+/* SIGNUP */
+
+/* LOGIN */
+
+/* PHOTO_FORM */
+
+/* PHOTO_CONFIRM_DELETE */
+
