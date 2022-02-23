@@ -1,4 +1,6 @@
-
+* {
+    font-family: 'Quicksand', sans-serif;
+}
 
 /* BASE */
 
@@ -33,12 +35,23 @@
 
 
 #home-body {
-    background-color: dodgerblue;
+    background: url("/static/images/photowall-far-away.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    /* background: url(/main_app/static/images/photowall-close-up.jpeg); */
+    /* background: url(https://i.imgur.com/2DktRqo.jpg); */
 }
 
+#home-heading {
+    width: fit-content;
+    background-color: whitesmoke;
+}
 
 /* ABOUT */
 
+#about-body {
+    background: url("/static/images/photowall-medium.jpeg") no-repeat center center fixed;
+    background-size: cover;
+}
 
 /* PHOTOS INDEX */
 

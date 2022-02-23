@@ -2,11 +2,11 @@
 {% block content %}
 
 <div class="page-title mt-4">
-    <h1>{{ photo.name.capitalize }}'s Detail Page</h1>
+    <h1 class="text-capitalize">{{ photo.name.capitalize }}'s Detail Page</h1>
 </div>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-9 p-3">
+        <div class="col-8 p-3">
             {% for photofile in photo.photofile_set.all %}
             <img src="{{ photofile.url }}" alt="{{ photo.name }}" class="img-fluid">
             {% empty %}
@@ -14,8 +14,8 @@
             {% endfor %}
         </div>
     </div>
-    <div class="row">
-        <div class="col-5">
+    <div class="row justify-content-center row-cols-auto">
+        <div class="col mt-2">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">
@@ -30,7 +30,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-5">
+        <div class="col mt-2">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">
