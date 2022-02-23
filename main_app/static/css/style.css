@@ -45,6 +45,14 @@
     width: fit-content;
     background-color: whitesmoke;
 }
+#home-position {
+    height: 300px;
+}
+
+#home-content {
+    width: fit-content;
+    background-color: whitesmoke;
+}
 
 /* ABOUT */
 
