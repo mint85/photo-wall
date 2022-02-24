@@ -12,7 +12,9 @@ Each user's Photo Wall is private and can only be viewed when they are logged in
 
 <br>
 
-Deployed App: 
+Deployed App: https://photo-wall-amj.herokuapp.com/
+
+
 
 <br>
 
@@ -30,6 +32,18 @@ Deployed App:
 <br>
 
 ## Screenshots:
+
+<br>
+
+![screenshot1](/main_app/static/images/screenshot1.jpg)
+
+<br>
+
+![screenshot1](/main_app/static/images/screenshot2.jpg)
+
+<br>
+
+![screenshot1](/main_app/static/images/screenshot3.jpg)
 
 <br>
 
