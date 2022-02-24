@@ -2,11 +2,21 @@
 
 {% block content %}
 
-    <h1>Are you sure you want to remove {{ object.name }}?</h1>
-    <form action"" method="post">
-        {% csrf_token %}
-        <input class="btn btn-danger" type="submit" value="Yes - Remove">
-        <a class="btn btn-primary" href="{% url 'photo_detail' object.id %}">Cancel</a>
-    </form>
+<body class="delete-body">
+    <div class="container">
+        <div class="row mt-5 justify-content-center">
+            <div class="col-md-12 d-flex justify-content-center align-items-center text-center">
+                <h1>Are you sure you want to remove {{ object.name }}?</h1>
+            </div>
+            <div class="col-md-8 d-flex justify-content-center align-items-center mt-5">
+                <form action"" method="post">
+                    {% csrf_token %}
+                    <input class="btn btn-danger mx-2" type="submit" value="Yes - Remove">
+                    <a class="btn btn-primary mx-2" href="{% url 'photo_detail' object.id %}">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
 
 {% endblock %}
