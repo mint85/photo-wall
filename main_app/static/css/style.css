@@ -2,7 +2,9 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+
 /* BASE */
+
 
 .navbar-custom {
     background-color: #c4c6d4;
@@ -61,7 +63,9 @@
     background-color: whitesmoke;
 }
 
+
 /* ABOUT */
+
 
 #about-body {
     background: url("/static/images/photowall-medium.jpeg") no-repeat center center fixed;
@@ -81,7 +85,9 @@
     height: 100px;
 }
 
+
 /* PHOTOS INDEX */
+
 
 .index-body {
     background-color: whitesmoke;
@@ -150,7 +156,9 @@
     top: 80%;
 }
 
+
 /* PHOTOS DETAIL */
+
 
 .detail-body {
     background-color: whitesmoke;
@@ -159,11 +167,19 @@
 #detail-photo {
     max-height: 750px;
 }
+
+
 /* SIGNUP */
 
 /* LOGIN */
 
 /* PHOTO_FORM */
+
+
+.form-body {
+    background-color: whitesmoke;
+}
+
 
 /* PHOTO_CONFIRM_DELETE */
 
