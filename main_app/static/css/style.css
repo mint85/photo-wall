@@ -61,6 +61,19 @@
     background-size: cover;
 }
 
+#about-position-1 {
+    height: 300px;
+}
+
+#about-content {
+    width: fit-content;
+    background-color: whitesmoke;
+}
+
+#about-position-2 {
+    height: 100px;
+}
+
 /* PHOTOS INDEX */
 
 
