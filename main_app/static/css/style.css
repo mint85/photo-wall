@@ -4,6 +4,9 @@
 
 /* BASE */
 
+.navbar-custom {
+    background-color: #c4c6d4;
+}
 
 #linkedin-link {
     border-radius: 50%;
@@ -29,6 +32,10 @@
 /* .main-area {
     had container and h-100 listed
 } */
+
+.footer-custom {
+    background-color: #c4c6d4;
+}
 
 
 /* HOME */
@@ -76,6 +83,9 @@
 
 /* PHOTOS INDEX */
 
+.index-body {
+    background-color: whitesmoke;
+}
 
 .page-title {
     text-align: center;
@@ -142,6 +152,13 @@
 
 /* PHOTOS DETAIL */
 
+.detail-body {
+    background-color: whitesmoke;
+}
+
+#detail-photo {
+    max-height: 750px;
+}
 /* SIGNUP */
 
 /* LOGIN */
