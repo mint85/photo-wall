@@ -171,7 +171,19 @@
 
 /* SIGNUP */
 
+
+.sign-up-body {
+    background-color: whitesmoke;
+}
+
+
 /* LOGIN */
+
+
+.login-body {
+    background-color: whitesmoke;
+}
+
 
 /* PHOTO_FORM */
 

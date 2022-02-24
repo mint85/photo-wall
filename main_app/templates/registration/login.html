@@ -2,13 +2,24 @@
 
 {% block content %}
 
-<h1>Log In To View Your Photo Wall</h1>
-
-<form action="{% url 'login' %}" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="hidden" name="next" value="{{ next }}">
-    <input type="submit" value="Login" class="btn btn-primary">
-</form>
+<body class="login-body">
+    <div class="text-center mt-5">
+        <h1>Log In To View Your Photo Wall</h1>
+    </div>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 d-flex justify-content-center align-items-center">
+                <form action="{% url 'login' %}" method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="hidden" name="next" value="{{ next }}">
+                    <center>
+                        <input type="submit" value="Login" class="btn btn-primary">
+                    </center>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
 
 {% endblock %}
