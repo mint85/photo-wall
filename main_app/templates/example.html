@@ -9,7 +9,7 @@
         {% for photo in photos %}
         <div class="col-lg-4 col-md-6 d-flex justify-content-center align-items-center mt-3">
             <div class="card-content">
-                <a href="{% url 'photo_detail' photo.id %}">
+                <a href="{% url 'example_detail' photo.id %}">
                     <div class="content-overlay"></div>
                     {% for photofile in photo.photofile_set.all %}
                     <img class="content-image" id="wall-img" src="{{ photofile.url }}">

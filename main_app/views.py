@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import login
 from .models import Photo, PhotoFile
+from django.contrib.auth.models import User
 import boto3
 import uuid
 
@@ -35,10 +36,12 @@ def about(request):
     return render(request, 'about.html')
 
 def example(request):
-    return render(request, 'example.html')
+    photos = Photo.objects.filter(user=1)
+    return render(request, 'example.html', {'photos': photos })
 
-def example_detail(request):
-    return render(request, 'example_detail.html')
+def example_detail(request, photo_id):
+    photo = Photo.objects.get(id=photo_id)
+    return render(request, 'example_detail.html', { 'photo': photo }) 
 
 @login_required
 def photos_index(request):

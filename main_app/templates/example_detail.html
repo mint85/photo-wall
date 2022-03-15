@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<body class="detail-body">
+<div class="page-title mt-4">
+    <h1 class="text-capitalize">{{ photo.name.capitalize }}'s Detail Page</h1>
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8 p-3 d-flex justify-content-center align-items-center">
+            {% for photofile in photo.photofile_set.all %}
+            <img src="{{ photofile.url }}" alt="{{ photo.name }}" class="img-fluid" id="detail-photo">
+            {% empty %}
+            <div class="noPhoto">No Photo Uploaded Yet. You will need to upload a photo to see it displayed here.</div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-5 p-3 mt-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Photo Details
+                    </h5>
+                    <p class="card-text">
+                        Name: {{ photo.name }}<br>
+                        Description: {{ photo.description }}
+                    </p>
+                    <button type="button" class="btn btn-primary disabled">Edit</button>
+                    <button type="button" class="btn btn-danger disabled">Delete</button>
+                    <a href="{% url 'example' %}" class="btn btn-secondary">Back to Photo Wall Example</a>
+                    <br><br>
+                    <p>
+                        Note: The Edit and Delete features are disabled in this example.
+                        Create an account to enable these features for your photos.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 p-3 mt-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Photo Upload
+                    </h5>
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <input type="file" name="photo-file">
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-success disabled" value="Upload Photo">Submit</button>
+                        <br><br>
+                        <p>
+                            Note: The Photo Upload feature is disabled in this example.
+                            Create an account to upload your own photos to your own personal Photo Wall.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+{% endblock %}
