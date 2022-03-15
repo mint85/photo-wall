@@ -34,6 +34,12 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
+def example(request):
+    return render(request, 'example.html')
+
+def example_detail(request):
+    return render(request, 'example_detail.html')
+
 @login_required
 def photos_index(request):
     photos = Photo.objects.filter(user=request.user)
