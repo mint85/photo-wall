@@ -6,6 +6,7 @@ Users can create an account with Photo Wall to perform full CRUD operations, inc
 
 Each user's Photo Wall is private and can only be viewed when they are logged in.
 
+There is also a read-only example Photo Wall that anyone can view without creating an account.
 <br>
 
 ## Getting Started:
