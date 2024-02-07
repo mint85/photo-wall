@@ -29,7 +29,6 @@ Deployed App: https://photo-wall-amj.herokuapp.com/
 - CSS
 - Bootstrap CSS Framework
 - Google Fonts
-- Heroku
 
 <br>
 
